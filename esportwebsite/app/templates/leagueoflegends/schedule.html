@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block logotext %}
+LOL
+{% endblock %}
+{% block nav %}
+<nav id="nav-1">
+    <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a class="current" href="{{ url_for('leagueoflegends') }}">League of Legends</a></li>
+        <li><a href="{{ url_for('hearthstone') }}">Hearthstone</a></li>
+        <li><a href="{{ url_for('overwatch') }}">Overwatch</a></li>
+    </ul>
+</nav>
+<nav id="nav-2">
+    <ul>
+        <li><a href="{{ url_for('lolschedule') }}">Schedule</a></li>
+        <li><a href="{{ url_for('lolstandings') }}">Standings</a></li>
+        <li><a href="{{ url_for('lolrules') }}">Rules</a></li>
+        <li><a href="{{ url_for('lolabout') }}">About</a></li>
+        <li><a href="{{ url_for('lolsignup') }}">Sign up</a></li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block header %}
+<img src="{{ url_for('static', filename='lolbg4.jpg')}}" alt="League of Legends Background">
+
+{% endblock %}
+{% block content %}
+    <div id="page">
+         <iframe src="http://challonge.com/2i6cp58/module?theme=5592&show_standings=1" width="100%" height="1000" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+    </div>
+{% endblock %}

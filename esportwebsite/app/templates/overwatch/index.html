@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block logotext %}
+OVERWATCH
+{% endblock %}
+{% block nav %}
+<nav id="nav-1">
+    <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('leagueoflegends') }}">League of Legends</a></li>
+        <li><a href="{{ url_for('hearthstone') }}">Hearthstone</a></li>
+        <li><a class="current" href="{{ url_for('overwatch') }}">Overwatch</a></li>
+    </ul>
+</nav>
+<nav id="nav-2">
+    <ul>
+        <li><a href="{{ url_for('owschedule') }}">Schedule</a></li>
+        <li><a href="{{ url_for('owstandings') }}">Standings</a></li>
+        <li><a href="{{ url_for('owrules') }}">Rules</a></li>
+        <li><a href="{{ url_for('owabout') }}">About</a></li>
+        <li><a href="{{ url_for('owsignup') }}">Sign up</a></li>
+    </ul>
+</nav>
+{% endblock %}
+{% block header %}
+<img id='cover' src="{{ url_for('static', filename='owbg1.jpg')}}" alt="Overwatch Backgroud">
+{% endblock %}
+{% block content %}
+    <div id="page">
+        <div class="container">
+            <div class="text a">
+                <h1>NEWS AND EVENTS</h1>
+            </div>
+            <div class="thumbnail b">
+                <img src="{{ url_for('static', filename='placeholder.png')}}" alt="Placeholder">
+            </div>
+            <div class="text c">
+                <h2>League of Legends Tournament</h2>
+
+                In X1 on Tuesdays
+            </div>
+            <div class="thumbnail d">
+                <img src="{{ url_for('static', filename='placeholder.png')}}" alt="Placeholder">
+            </div>
+            <div class="text e">
+                <h2>Hearthstone Tournament</h2>
+
+                In X1 on Tuesdays
+            </div>
+            <div class="thumbnail f">
+                <img src="{{ url_for('static', filename='placeholder.png')}}" alt="Placeholder">
+            </div>
+            <div class="text g">
+                <h2>Overwatch Tournament</h2>
+
+                In X1 on Tuesdays
+
+            </div>
+            <div class="thumbnail h">
+                <img src="{{ url_for('static', filename='placeholder.png')}}" alt="Placeholder">
+            </div>
+            <div class="text i">
+                <h2>Placeholder</h2>
+
+                Placeholder
+
+            </div>
+            <div class="thumbnail j">
+                <img src="{{ url_for('static', filename='placeholder.png')}}" alt="Placeholder">
+            </div>
+            <div class="text k">
+                <h2>Placeholder</h2>
+
+                Placeholder
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

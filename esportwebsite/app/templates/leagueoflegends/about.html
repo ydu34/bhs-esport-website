@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block logotext %}
+LOL
+{% endblock %}
+{% block nav %}
+<nav id="nav-1">
+    <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a class="current" href="{{ url_for('leagueoflegends') }}">League of Legends</a></li>
+        <li><a href="{{ url_for('hearthstone') }}">Hearthstone</a></li>
+        <li><a href="{{ url_for('overwatch') }}">Overwatch</a></li>
+    </ul>
+</nav>
+<nav id="nav-2">
+    <ul>
+        <li><a href="{{ url_for('lolschedule') }}">Schedule</a></li>
+        <li><a href="{{ url_for('lolstandings') }}">Standings</a></li>
+        <li><a href="{{ url_for('lolrules') }}">Rules</a></li>
+        <li><a href="{{ url_for('lolabout') }}">About</a></li>
+        <li><a href="{{ url_for('lolsignup') }}">Sign up</a></li>
+    </ul>
+</nav>
+
+{% endblock %}
+{% block header %}
+<img src="{{ url_for('static', filename='lolbg2.jpg')}}" alt="League of Legends Background">
+
+{% endblock %}
+{% block content %}
+    <div id="page">
+            <h1>BHS LEAGUE OF LEGENDS</h1>
+            <p>
+                <img class="page-img"src="{{ url_for('static', filename='burnsidestudents2.jpg')}}" alt="Burnside High School Students">
+            “We have improved as a team significantly,” says Michael Green, a student at Burnside. “All players have started giving and taking advice, as our attitude towards each other has improved so much. I now use my mistakes to improve: How can I learn from this? How do I get better? It helps that our teams are reflecting as a group.”
+            <br>
+The club—run by Burnside teacher Fin Cresswell—has been using these Sportsmanship Materials and our Teacher’s Resource page to help students assess their own learning. These tools aim to encourage self awareness in a competitive environment, helping students identify and reflect on their own behaviour.
+                <br>
+                Losing is hard, it does not feel good, so we have to respect the losing experience. Having someone shake your hand makes you deal with losing. Sportsmanship helps you to move forward from the game
+<br>
+“You must respect other players,” says Ash Fitzgibbon, another student involved in the club. ”Before this, I did not think it mattered, now I understand that it’s important because it changes the game for the better. Losing is hard, it does not feel good, so we have to respect the losing experience. Having someone shake your hand makes you deal with losing. Sportsmanship helps you to move forward from the game.”
+            </p>
+
+        </div>
+    </div>
+{% endblock %}

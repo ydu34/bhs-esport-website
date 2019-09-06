@@ -1,0 +1,581 @@
+/* Base properties for whole website */
+html, body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+    min-width:1000px;
+}
+
+
+body {
+    background-color: #191919;
+    color: #FFFFFF;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 2em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+/* Grid Layout Setup */
+#wrapper {
+    display: grid;
+    grid-gap: 0px;
+    margin: 0 auto;
+    grid-template-columns: repeat(8, [col] 1fr ) ;
+    grid-auto-rows: minmax(0px, auto);
+}
+
+/* Header */
+header {
+    width:100%;
+    grid-column: 1 / -1;
+    grid-row: 1;
+    object-fit:contain;
+}
+
+header img {
+    width:100%;
+}
+
+header .cycle-slideshow {
+    top:0px;
+}
+
+
+/* Navigation Bar */
+#nav-head {
+    width: 100%;
+    height:90px;
+    margin: 0 auto;
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    text-align: center;
+    transition-delay: .00ms;
+    transition: height 300ms cubic-bezier(0.165,0.840,0.440,1.000);
+}
+
+/* For Navigation Transition Effect when user scrolls down */
+#nav-head.opaque {
+    width: 100%;
+    height:90px;
+    margin: 0 auto;
+    background-color: #252525;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    text-align: center;
+    transition-delay: .00ms;
+    transition: height 300ms cubic-bezier(0.165,0.840,0.440,1.000);
+    transition: background-color 0.5s ease 0s;
+}
+
+#nav-head li a {
+    color: #FFFFFF;
+}
+
+
+#nav-head.opaque li a {
+    color: #C0c0c0;
+}
+
+
+#nav-head.opaque:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(#005747, #499945);
+    left: 0;
+
+}
+
+
+#nav-head.opaque:after {
+    content: "";
+    height: 100%;
+    position: absolute;
+    background-color: #252525;
+    width: 50%;
+    left: 50%;
+    top: 0;
+    z-index: -1;
+}
+
+.nav-wrapper {
+    height: 100%;
+    position: relative;
+    width: 1000px;
+    left: 50%;
+    margin-left: -420px;
+    float: left;
+}
+
+.nav-wrapper #logo{
+    width: 40px;
+    position: relative;
+    float: left;
+    padding-left: 40px;
+    padding-top: 4px;
+    padding-right: 165px;
+
+}
+
+.nav-wrapper .logo-wrapper {
+    padding-top: 15px;
+    padding-left: 86px;
+    position: absolute;
+    text-align:left;
+    color: #FFFFFF;
+    font-family: sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.8px;
+}
+
+.nav-wrapper .logo-wrapper .logo-text-1{
+    font-weight:bold;
+    height:23px;
+}
+
+.nav-wrapper .logo-wrapper .logo-text-2{
+    height:23px;
+}
+
+.nav-wrapper .logo-wrapper .logo-text-3{
+    height:23px;
+
+}
+
+#nav-menu {
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+    float: left;
+    position: relative;
+    display: inline-block;
+    height: 100%;
+
+}
+
+#nav-menu.opaque {
+    padding: 0;
+    background-color: #252525;
+    float: left;
+    position: relative;
+    display: inline-block;
+    height: 100%;
+
+}
+#nav-menu.opaque:before {
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 24.25px;
+    left: -24.25px;
+    box-sizing: border-box;
+    border-right: 23.25px solid #252525;
+    border-top: 90px solid transparent;
+    transition-delay: .00ms;
+}
+
+#nav-menu.opaque:after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: #333;
+    top: 45px;
+    left: 0;
+    position: absolute;
+    transition: width 500ms cubic-bezier(0.165,0.840,0.440,1.000);
+    transition-delay: 300ms;
+}
+
+/* Top part of the navigation bar */
+#nav-head #nav-1 {
+    height:46px;
+	margin: 0 0 0.5em 0;
+	padding: 0;
+
+}
+
+#nav-head #nav-1 ul {
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+	position:relative;
+}
+
+
+
+#nav-head #nav-1 li {
+	float: left;
+	overflow:hidden;
+}
+
+#nav-head #nav-1 li a {
+	display: inline-block;
+	padding: 14px 17px 2px;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-size: 1.25em;
+	border-bottom: 4px solid transparent;
+	transition: all 0.4s;
+	z-index:99;
+}
+
+#nav-head #nav-1 ul li a:before {
+    width: 100%;
+    height: 0;
+    background-color: #4b2121;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    opacity: 0;
+    transition: all 100ms cubic-bezier(0.165,0.840,0.440,1.000);
+}
+
+/* Effects navigation bar*/
+#nav-head #nav-1 li a:hover, #nav-head a.current{
+    color: #a5f3a9;
+}
+
+#nav-head.opaque #nav-1 li a:hover{
+    border-bottom: 4px solid #1ab325 ;
+    color: #FFFFFF;
+}
+
+#nav-head.opaque #nav-1 li a.current{
+    border-bottom: 4px solid #1ab325 ;
+    color: #FFFFFF;
+}
+
+
+/* Bot part of the navigation bar */
+#nav-head #nav-2 {
+    height: 40px;
+	margin: 0;
+	padding: 0;
+
+}
+
+#nav-head #nav-2 ul {
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+	position:relative;
+}
+
+
+#nav-head #nav-2 li {
+	float: left;
+	overflow: hidden;
+}
+
+#nav-head #nav-2 li a {
+	display: inline-block;
+	padding: 0px 15px;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-size: 1.25em;
+	position: relative;
+	left: -10px;
+	transition: all 0.4s;
+}
+
+
+/* Effects on navigation bar*/
+#nav-head.opaque #nav-2 li a:hover, a.current{
+    color: 	#FFFFFF;
+}
+
+#nav-head #nav-2 li a:hover{
+    color: #a5f3a9;
+}
+
+#nav-head.opaque #nav-2 li a.current{
+    color: #FFFFFF;
+}
+
+/* Footer */
+footer {
+   position:relative;
+   bottom:0;
+   width:100%;
+   height:200px;
+   background-color:#000000;
+   margin:0;
+   grid-column: 1 / -1;
+   grid-row: 3;
+}
+
+footer p {
+    color: #FFFFFF;
+    text-align: center;
+    bottom:0;
+    font-size:14px;
+    padding-top:140px;
+}
+
+/* Content */
+#page {
+    margin: 0 auto 0 auto;
+    width: 100%;
+    grid-column: col 3 / span 4;
+	grid-row: row ;
+
+}
+
+#page .page-img {
+    width:100%;
+}
+/* Nested Grid used for News and Events section */
+
+.container {
+    grid-column: col 3 / span 4;
+	grid-row: row 2;
+	display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 40px;
+	grid-template-columns: repeat(5, [col] 1fr );
+    position: relative;
+    display: grid;
+    margin-bottom: 50px;
+
+
+}
+.text {
+
+}
+
+.thumbnail {
+    padding-left: 5px;
+}
+.thumbnail img{
+    max-height: 100%;
+    max-width: 100%;
+}
+.a {
+    grid-column: 1 / 7;
+	grid-row: 1;
+}
+
+.b {
+    grid-column :1 / 3;
+    grid-row: 2;
+}
+
+.c {
+    grid-column: 3 / 7;
+	grid-row: 2;
+}
+
+.d{
+    grid-column :1 / 3;
+    grid-row: 3;
+}
+
+.e{
+    grid-column: 3 / 7;
+	grid-row: 3;
+}
+
+.f{
+    grid-column :1 / 3;
+    grid-row: 4;
+}
+
+.g{
+    grid-column: 3 / 7;
+	grid-row: 4;
+}
+
+.h{
+    grid-column :1 / 3;
+    grid-row: 5;
+}
+
+.i{
+    grid-column: 3 / 7;
+	grid-row: 5;
+}
+
+.j{
+    grid-column :1 / 3;
+    grid-row: 6;
+}
+
+.k{
+    grid-column: 3 / 7;
+	grid-row: 6;
+}
+
+/* Front page slideshow displaying eSports */
+/* set border-box so that percents can be used for width, padding, etc (personal preference) */
+.cycle-slideshow, .cycle-slideshow * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+
+.cycle-slideshow {
+    padding: 0;
+    position: relative;
+    width:100%;
+    height:100%;
+
+ }
+
+/* slideshow images (for most of the demos, these are the actual "slides") */
+.cycle-slideshow img{
+    /*
+    some of these styles will be set by the plugin (by default) but setting them here
+    helps avoid flash-of-unstyled-content
+    */
+    max-width: 100%;
+    height: auto;
+    width:10000px;
+    position: absolute;
+    top: 0; left: 0;
+    padding: 0;
+    display: block;
+    object-position: 50% 100%;
+}
+
+/* in case script does not load */
+.cycle-slideshow img:first-child {
+    position: static; z-index: 100;
+}
+
+/* pager */
+.cycle-pager {
+    text-align: center; width: 100%; z-index: 500; position: absolute; top: 10px; overflow: hidden;
+}
+.cycle-pager span {
+    font-family: arial; font-size: 50px; width: 16px; height: 16px;
+    display: inline-block; color: #ddd; cursor: pointer;
+}
+.cycle-pager span.cycle-pager-active {
+    color: #D69746;
+    }
+.cycle-pager > * {
+    cursor: pointer;
+    }
+
+
+/* caption */
+.cycle-caption {
+    position: absolute;
+    color:white;
+    top: 15px;
+    right: 15px;
+    z-index: 700;
+}
+
+
+/* overlay */
+.cycle-overlay {
+    position: absolute;
+    top: 45%;
+    width: 14%;
+    height: 38%;
+    left:13%;
+    z-index: 600;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    background-size: 80px;
+    background-repeat: no-repeat;
+}
+/* overlay logo */
+.cycle-overlay .overlay-logo {
+    opacity: 1;
+    z-index: 700;
+    width:65%;
+    position:relative;
+    left:16%;
+}
+
+.cycle-overlay .overlay-logo .logo{
+    width:100%;
+    height:100%;
+}
+
+/* overlay text */
+.cycle-overlay p {
+    font-size: 0.85vw;
+    margin: 3% 2% 3%  2%
+}
+
+/* overlay button */
+.cycle-overlay .overlay-button {
+    background: linear-gradient(#499945, #005747);
+    border: none;
+    color: white;
+    padding: 4% 18%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.3vw;
+    margin: 3% 2% 3% 2%;
+    cursor: pointer;
+}
+/* pager */
+.cycle-pager {
+    top:93%;
+}
+
+/* prev / next links */
+.cycle-prev, .cycle-next {
+    position: absolute;
+    top: 0;
+    width: 3%;
+    z-index: 800;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.cycle-prev {
+    left:2%;
+    background: url("leftarrow.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: left center;
+
+}
+
+.cycle-next {
+    right:2%;
+    background: url("rightarrow.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+.cycle-prev:hover, .cycle-next:hover {
+    opacity: .4;
+    filter: alpha(opacity=70);
+    }
+
+.disabled { opacity: .5; filter:alpha(opacity=50); }
+
+
+
+

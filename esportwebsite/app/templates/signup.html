@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block logotext %}
+
+ESPORTS
+{% endblock %}
+{% block nav %}
+<nav id="nav-1">
+    <ul>
+        <li><a class="current" href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('leagueoflegends') }}">League of Legends</a></li>
+        <li><a href="{{ url_for('hearthstone') }}">Hearthstone</a></li>
+        <li><a href="{{ url_for('overwatch') }}">Overwatch</a></li>
+    </ul>
+</nav>
+<nav id="nav-2">
+    <ul>
+        <li><a href="{{ url_for('schedule') }}">Schedule</a></li>
+        <li><a href="{{ url_for('standings') }}">Standings</a></li>
+        <li><a href="{{ url_for('rules') }}">Rules</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('signup') }}">Sign up</a></li>
+    </ul>
+</nav>
+{% endblock %}

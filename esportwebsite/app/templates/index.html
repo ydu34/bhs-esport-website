@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% block logotext %}
+
+ESPORTS
+{% endblock %}
+{% block nav %}
+<nav id="nav-1">
+    <ul>
+        <li><a class="current" href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('leagueoflegends') }}">League of Legends</a></li>
+        <li><a href="{{ url_for('hearthstone') }}">Hearthstone</a></li>
+        <li><a href="{{ url_for('overwatch') }}">Overwatch</a></li>
+    </ul>
+</nav>
+<nav id="nav-2">
+    <ul>
+        <li><a href="{{ url_for('schedule') }}">Schedule</a></li>
+        <li><a href="{{ url_for('standings') }}">Standings</a></li>
+        <li><a href="{{ url_for('rules') }}">Rules</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('signup') }}">Sign up</a></li>
+    </ul>
+</nav>
+{% endblock %}
+{% block header %}
+<!-- prev/next -->
+
+<!-- slideshow -->
+    <div class="cycle-slideshow"
+         data-cycle-swipe=true
+         data-cycle-swipe-fx=scrollHorz
+         data-cycle-timeout=3000
+         data-cycle-slides=".slide"
+    > <!-- adding a class to the slides -->
+        <div class="cycle-pager"></div>
+        <div class="cycle-prev"></div>
+        <div class="cycle-next"></div>
+        <div class="slide">
+            <img src="{{ url_for('static', filename='lolslide.jpg')}}" alt="League of Legends Slide">
+            <div class="cycle-overlay"><div class="overlay-logo"><img class="logo" src="{{ url_for('static', filename='lollogo.png')}}" alt="League of Legends Logo"></div>
+                <!-- the information displayed on the overlay -->
+                <p>League of Legends is a free to play MOBA games. <br>Come play at X1 afterschool on Tuesday</p>
+                <a href="{{ url_for('leagueoflegends') }}" class="overlay-button">Learn More</a>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="{{ url_for('static', filename='hsslide.jpg')}}" alt="Hearthstone Slide">
+            <div class="cycle-overlay"><div class="overlay-logo"><img class="logo" src="{{ url_for('static', filename='hslogo.png')}}" alt="Hearthstone Logo"></div>
+                <!-- the information displayed on the overlay -->
+                <p>Hearthstone is a free to play online collectable card game. Come play at J7 at lunchtime on Wednesdays</p>
+                <a href="{{ url_for('hearthstone') }}" class="overlay-button">Learn More</a>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="{{ url_for('static', filename='owslide.jpg')}}" alt="Overwatch Slide">
+            <div class="cycle-overlay"><div class="overlay-logo"><img class="logo" src="{{ url_for('static', filename='owlogo.png')}}"  alt="Overwatch Logo"></div>
+                <!-- the information displayed on the overlay -->
+                <p>Overwatch is a team-based FPS game. Come play at X1 afterschool on Mondays</p>
+                <br>
+                <a href="{{ url_for('overwatch') }}" class="overlay-button">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+{% block content %}
+    <div id="page">
+        <div class="container">
+            <div class="text a">
+                <h1>NEWS AND EVENTS</h1>
+            </div>
+            <div class="thumbnail b">
+                <img src="{{ url_for('static', filename='placeholder.png')}}" alt="Placeholder">
+            </div>
+            <div class="text c">
+                <h2>League of Legends Tournament</h2>
+
+                In X1 on Tuesdays
+            </div>
+            <div class="thumbnail d">
+                <img src="{{ url_for('static', filename='placeholder.png')}}" alt="Placeholder">
+            </div>
+            <div class="text e">
+                <h2>Hearthstone Tournament</h2>
+
+                In X1 on Tuesdays
+            </div>
+            <div class="thumbnail f">
+                <img src="{{ url_for('static', filename='placeholder.png')}}" alt="Placeholder">
+            </div>
+            <div class="text g">
+                <h2>Overwatch Tournament</h2>
+
+                In X1 on Tuesdays
+
+            </div>
+            <div class="thumbnail h">
+                <img src="{{ url_for('static', filename='placeholder.png')}}" alt="Placeholder">
+            </div>
+            <div class="text i">
+                <h2>Placeholder</h2>
+
+                Placeholder
+
+            </div>
+            <div class="thumbnail j">
+                <img src="{{ url_for('static', filename='placeholder.png')}}" alt="Placeholder">
+            </div>
+            <div class="text k">
+                <h2>Placeholder</h2>
+
+                Placeholder
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

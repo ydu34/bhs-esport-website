@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block logotext %}
+OVERWATCH
+{% endblock %}
+{% block nav %}
+<nav id="nav-1">
+    <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('leagueoflegends') }}">League of Legends</a></li>
+        <li><a href="{{ url_for('hearthstone') }}">Hearthstone</a></li>
+        <li><a class="current" href="{{ url_for('overwatch') }}">Overwatch</a></li>
+    </ul>
+</nav>
+<nav id="nav-2">
+    <ul>
+        <li><a href="{{ url_for('owschedule') }}">Schedule</a></li>
+        <li><a href="{{ url_for('owstandings') }}">Standings</a></li>
+        <li><a href="{{ url_for('owrules') }}">Rules</a></li>
+        <li><a href="{{ url_for('owabout') }}">About</a></li>
+        <li><a href="{{ url_for('owsignup') }}">Sign up</a></li>
+    </ul>
+</nav>
+
+{% endblock %}
